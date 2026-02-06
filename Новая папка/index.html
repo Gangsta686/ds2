@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Задания 1–2</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <h1>Задания 1–2</h1>
+      <nav class="tabs">
+        <button class="tab-button is-active" data-tab="task1">Задание 1</button>
+        <button class="tab-button" data-tab="task2">Задание 2</button>
+      </nav>
+    </header>
+
+    <main class="content">
+      <section id="task1" class="tab-panel is-active">
+        <h2>Задание 1: комбинация слитков для рюкзака</h2>
+        <div class="panel">
+          <label class="field">
+            Вместимость рюкзака
+            <input id="capacity" type="number" min="1" value="10" />
+          </label>
+          <label class="field">
+            Слитки (вес, ценность) — по одному на строке
+            <textarea
+              id="itemsInput"
+              rows="6"
+              placeholder="Например:&#10;2 6&#10;2 10&#10;3 12"
+            ></textarea>
+          </label>
+          <button id="calcKnapsack" class="action-button">Посчитать</button>
+        </div>
+        <div id="knapsackResult" class="result"></div>
+      </section>
+
+      <section id="task2" class="tab-panel">
+        <h2>Задание 2: количество путей от A до Я</h2>
+        <div class="panel">
+          <div class="toolbar">
+            <button id="addNode" class="action-button">Добавить вершину</button>
+            <button id="clearGraph" class="action-button is-secondary">
+              Очистить
+            </button>
+            <label class="field inline-field">
+              Буква
+              <input id="nodeLabelInput" type="text" maxlength="2" placeholder="A" />
+            </label>
+            <span class="hint">
+              Рисование: нажмите «Добавить вершину», затем кликните по полю.
+              Чтобы соединить вершины, кликните одну и затем вторую.
+            </span>
+          </div>
+          <canvas id="graphCanvas" width="900" height="420"></canvas>
+        </div>
+        <div class="panel">
+          <button id="countPaths" class="action-button">Посчитать пути</button>
+          <div id="pathsResult" class="result"></div>
+        </div>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+
